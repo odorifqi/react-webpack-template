@@ -1,10 +1,12 @@
+/* eslint-disable no-undef */
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  devtool: "source-map",
+  mode: "development",
+  devtool: "eval-source-map",
   entry: path.resolve(__dirname, "./src/index.js"),
   module: {
     rules: [
@@ -50,7 +52,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: "React Template Babel-webpack",
+      title: "255 Clock",
       template: path.resolve(__dirname, "./src/index.html"),
     }),
     new webpack.HotModuleReplacementPlugin(),
