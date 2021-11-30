@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import regeneratorRuntime from "regenerator-runtime";
 import s from "./style.css";
 
 function App() {
@@ -11,13 +10,6 @@ function App() {
   );
 }
 
-const rootDiv = document.getElementById("root");
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  rootDiv
-);
+ReactDOM.render(<App />, document.getElementById("root"));
 
 module.hot.accept();
